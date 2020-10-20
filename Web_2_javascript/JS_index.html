@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>자바스크립트 어려워요</title>
+    <style>
+      .js{
+        font-size:18px;
+        font-weight: bold;
+      }
+      h2{
+        text-align:left;
+        color:powderblue;
+        background-color:coral;
+      }
+    </style>
+  </head>
+  <body style="background-color:white;color:black;">
+    <h1>JAVASCRIPT의 용도</h1>
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    var search = document.querySelector('body');
+    var transfer = document.querySelector('#night_day');
+
+    if (search.style.backgroundColor === 'black'){
+      transfer.value = 'day';
+    }
+    else{
+      transfer.value = 'night';
+    }
+
+    "
+    >
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+
+    var search = document.querySelector('body');
+    var transfer = document.querySelector('#night_day');
+
+    if (search.style.backgroundColor === 'black'){
+      transfer.value = 'day';
+    }
+    else{
+      transfer.value = 'night';
+    }
+    "
+    >
+    <p>&nbsp;</p>
+    <!--원래는 document.querySelector에 id값까지 해야하나, input 태그 내 button관련이므로 this로 변환 가능하다-->
+    <!--이름으로 지정도 가능하다. 변수 선언도 함수지정이 가능.-->
+    <input id="night_day" type="button" value="night" onclick="
+    var select = document.querySelector('body');
+    var a_list = document.querySelectorAll('a');
+    /*querySelectorAll는 CSS 특성을 가진 요소를 가져와서 Array, 배열로 만들어서 각자 수정 가능*/
+
+    if(this.value === 'night'){
+      select.style.backgroundColor='black';
+      select.style.color='white';
+      this.value ='day';
+
+      var i = document.getElementsByTagName('a').length;
+      while (i > 0) {
+        a_list[a_list.length - i].style.color = 'powderblue';
+        i -= 1;
+      }
+    }
+
+    else{
+      select.style.backgroundColor='white';
+      select.style.color='black';
+      this.value ='night';
+
+      var j = a_list.length;
+      while (j > 0) {
+        a_list[a_list.length - j].style.color = 'blue';
+        j -= 1;
+      }
+    }
+    ">
+    <br>
+    <img src="C:\Users\babme\Videos\Captures\What_is_JS.png" width="750px" height="380px">
+    <h2>JavaScript</h2>
+    <a href="D:\Html 파일 정리\HTML 공부용 파일\공부내용파일\Web_2_javascript\JS_index.html"
+    title="본문">
+      <h1>WEB</h1>
+    </a>
+    <ol>
+      <li>
+        <a href="D:\Html 파일 정리\HTML 공부용 파일\공부내용파일\What_is_html.html"
+        title= "HTML이 무엇일까?">
+        HTML
+        </a>
+      </li>
+      <li>
+        <a href="D:\Html 파일 정리\HTML 공부용 파일\공부내용파일\What_is_css.html"
+        title="CSS가 무엇일까?">
+        CSS
+        </a>
+      </li>
+      <li>
+        <a href="D:\Html 파일 정리\HTML 공부용 파일\공부내용파일\What_is_javascript.html"
+        title="자바스크립트 어려워요">
+        JavaScript
+        </a>
+      </li>
+    </ol>
+    <p>
+      <span class="js">프로토타입기반의 객체지향 프로그래밍 언어</span>로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다. HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다. 웹 페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, CSS는 자동차의 외관, JavaScript는 자동차의 동력이라고 볼 수 있다.
+      <br>
+      썬 마이크로시스템즈(현재 오라클)에서 개발한 Java와는 별 관계가 없는 언어이다. 이름이 비슷하다고 같은 언어가 아니다. 사람들이 흔히 헷갈리는 부분 중 하나. 실질적인 구동 방식도 JVM을 이용해서 돌리는 Java와, 브라우저 내에 스크립트 엔진(인터프리터)이 존재하는 JavaScript는 완전히 다르다. 햄이랑 햄스터가 다르고 파와 파슬리가 다르며, 인도가 인도네시아와 다르듯 심지어는 웹 서버용 파생 규격도 다르다.
+      <br>
+      <span class="js">JavaScript</span>는 C에서 영향을 받은 C-Family 언어로 기본적인 문법이 유사 중괄호로 구분하는 블럭, 세미콜론으로 줄이 끝남을 알리는 것[2], 변수 쓰는 법, 연산자 사용법 등 기초적인 문법이 C 문법과 크게 다르지 않다.
+    </p>
+    <p>What is <span class="js">javascript?</span></p>
+    <br>
+    <p>Okay let's do this</p>
+    <!--div 태그는 inline으로 공간 전부 차지이므로, 띄어쓰기가 자동으로 된다-->
+    <!---->
+  </body>
+</html>

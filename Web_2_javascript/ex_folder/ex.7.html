@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배열&반복문 학습</title>
+  </head>
+  <body>
+    <h1>Loop&Array</h1>
+    <h2>공동작업자 목록</h2>
+    <ul>
+      <li>국 빈</li>
+      <li>이태화</li>
+      <li>구자웅</li>
+      <li>장주현</li>
+      <li>한철현</li>
+    </ul>
+    <h2>반복문과 배열 사용</h2>
+    <script>
+      var coworkers = ['국 빈',
+      '구자웅','이태화',
+      '한철현','장주현'];
+    </script>
+    <ul>
+      <script>
+        var a=0;
+        while(a<coworkers.length){
+          document.write('<li>'+coworkers[a]+'</li>')
+          a += 1;
+        }
+      </script>
+    </ul>
+    <h2>링크에도 적용</h2>
+    <ul>
+      <script>
+        var b = 0;
+        while(b < coworkers.length){
+          document.write('<li><a href="http://a.com/'+coworkers[b]+'">'+coworkers[b]+'</a></li>')
+          b += 1;
+        }
+      </script>
+    </ul>
+    <h2>태그 갯수 세기</h2>
+    <script>
+      var d = document.getElementsByTagName('h2').length;
+      document.write(d);
+    </script>
+  </body>
+</html>

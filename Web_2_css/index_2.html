@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>웹 공부-어서오세요</title>
+    <style>
+      #grid{/*id 선택자 뒤에 tag를 쓰면, 아이디에 소속된 태그가 이에 해당한다라고 보는 것*/
+        display: grid;
+        grid-template-columns:150px 1fr;
+      }
+      #left{
+        border-right:1px solid black;
+        width:100px;
+        margin:0;
+        padding:20px;
+      }
+      #right{
+        padding-left: 25px;
+      }
+      .li_text{
+        font-family:"돋움";
+        font-size:18px;
+      }
+      .center{
+        display:block;
+        margin: 0 auto;
+      }
+
+      body {
+        margin:0px;
+      }
+      a {
+        color:green;
+        text-decoration-line:none;
+      } /*선택자 우선순위는 id>class>tag 이다.*/
+      h1 {
+        color:blue;
+        font-size:40px;
+        text-align:center;
+        border-bottom: 2px solid black;
+        padding:20px;
+        margin:0px;
+      }
+      ol,ul {
+        color:black;
+        padding-left:15px;
+      }
+      @media(max-width:620px){
+        #grid{
+          display:block;
+        }
+        #grid #left{
+          border-right:none;
+        }
+        h1{
+          border-bottom:none;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WEB</h1>
+    <div id="grid">
+      <div id="left">
+        <ol>
+          <li>
+            <a href="D:\Html 파일 정리\HTML 공부용 파일\공부내용파일\Web_2_css\index_html.html"
+            title= "HTML이 무엇일까?">
+              HTML
+            </a>
+            <!--<font color = "purple">HTML</font>-->
+          </li>
+          <li>
+            <a href="D:\Html 파일 정리\HTML 공부용 파일\공부내용파일\Web_2_css\index_CSS.html"
+            title="CSS가 무엇일까?">
+              CSS
+            </a>
+            <!--<font color = "purple">CSS</font>-->
+          </li>
+          <li>
+            <a href="D:\Html 파일 정리\HTML 공부용 파일\공부내용파일\Web_2_css\index_javascript.html"
+            title="자바스크립트 어려워요">
+              Javascript
+            </a>
+            <!--<font color = "purple">Javascript</font>-->
+          </li>
+        </ol>
+        <ul>
+          <li class="li_text">파일</li>
+          <li class="li_text">목록</li>
+          <li class="li_text">제작자</li>
+        </ul>
+      </div>
+      <div id="right">
+        <h2>CSS는 무엇인가?</h2>
+        <img class="center" src="C:\Users\babme\Videos\Captures\What is Web.png" width="432px" height="240px"/>
+        <p>
+          Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+          CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics,
+          enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+#grid{/*id 선택자 뒤에 tag를 쓰면, 아이디에 소속된 태그가 이에 해당한다라고 보는 것*/
+  display: grid;
+  grid-template-columns:150px 1fr;
+}
+#left{
+  border-right:1px solid black;
+  width:100px;
+  margin:0;
+  padding:20px;
+}
+#right{
+  padding-left: 25px;
+}
+.li_text{
+  font-family:"돋움";
+  font-size:18px;
+}
+.center{
+  display:block;
+  margin: 0 auto;
+}
+body {
+  margin:0px;
+}
+a.list {
+  color:green;
+  text-decoration-line:none;
+} /*선택자 우선순위는 id>class>tag 이다.*/
+a {
+  color:blue;
+  text-decoration-line:underline;
+} /*선택자 우선순위는 id>class>tag 이다.*/
+h1 {
+  color:blue;
+  font-size:40px;
+  text-align:center;
+  border-bottom: 2px solid black;
+  padding:20px;
+  margin:0px;
+}
+ol,ul {
+  color:black;
+  padding-left:15px;
+}
+@media(max-width:620px){
+  #grid{
+    display:block;
+  }
+  #grid #left{
+    border-right:none;
+  }
+  h1{
+    border-bottom:none;
+    text-align: left;
+  }
+}

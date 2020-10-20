@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>함수 기본 개념</title>
+    <style>
+      h2:lang(ko){
+        font-family: "여기어때 잘난체 OTF";
+      }
+      p.explain:lang(ko) {
+        font-size:15px;
+        font-family: "배달의민족 연성";
+      }
+      li:lang(ko){
+        font-size:15px;
+        font-family: "배달의민족 연성";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>함수 활용</h1>
+    <h2>원래 자바스크립트 입력은</h2>
+    <ul>
+      <script>
+        document.write('<li>1</li>');
+        document.write('<li>2-1</li>');
+        document.write('<li>2-2</li>');
+        document.write('<li>3</li>');
+        document.write('<li>3-1</li>');
+        document.write('<li>3-2</li>');
+        document.write('<li>아저씨 언제까지</li>');
+        document.write('<li>write 메소드만 쓸꺼야?</li>');
+      </script>
+    </ul>
+    <h2>함수로 바꿨을 시</h2>
+    <ul>
+      <script>
+        function two(){
+          document.write('<li>2-1</li>');
+          document.write('<li>2-2</li>');
+        }
+        document.write('<li>1</li>');
+        two();
+        document.write('<li>3</li>');
+        two();
+      </script>
+    </ul>
+    <h2>매개변수, 인자</h2>
+    <p class="explain">
+      함수를 쓰기 전에...<br/>
+      매개변수는 함수 선언에서 변수를 받는 쪽이 매개변수이며,<br/>
+      인자는 함수 사용에서 변수를 입력하는 곳이 인자가 되는 것이다.<br/>
+      많은 언어에서 함수를 사용하기 때문에 이를 헷갈려하는 일은 최대한 줄이다.<br/>
+      매개변수는 Parameter, 인자는 Argument이다
+    </p>
+    <h2>Parameter, Argument</h2>
+    <script>
+      document.write(4+3+'<br/>');
+      function LefttoRight(left,right){
+        document.write(left+right+'<br/>');
+        //숫자만 넣어주세요!!!
+      }
+      LefttoRight(5,10);
+      LefttoRight(7,1);
+    </script>
+
+  </body>
+</html>
