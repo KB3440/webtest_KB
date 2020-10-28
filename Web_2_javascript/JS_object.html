@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>객체 정리</title>
+  </head>
+  <body>
+    <h1>객체(Object)</h1>
+    <h2>객체 만들어보기(create)</h2>
+    <script>
+      var coworkers = {
+        "programmers" : '국 빈',
+        "designers" : '이태화'
+      };
+      document.write("programmers : "+coworkers.programmers+'<br>');
+      document.write("designers : "+coworkers.designers+'<br>');
+      //위에 글씨 적는 것인데, 먼저 옆에는 문자열이고, coworkers.***이 객체에 있는 method를 불러오는 것이다.
+      coworkers.bookkeeper = "구자웅";
+      document.write("bookkeeper : "+coworkers.bookkeeper+'<br>');
+      coworkers["data scientist"] = "장주현";
+      document.write("data scientist : "+coworkers['data scientist']+'<br>');
+    </script>
+    <h2>Iterate, 반복해보기</h2>
+    <script>
+      for (var key in coworkers){
+        //위에 괄호는 key라는 변수 안에 coworkers의 정보를 담았다는 뜻
+        document.write(key+" : "+coworkers[key]+'<br>')
+      }
+    </script>
+    <h2>Method,객체 내 함수들</h2>
+    <script>
+      /*
+      coworkers.showAll = function(){
+        for (var key in coworkers){
+          document.write(key+" : "+coworkers[key]+'<br>');
+        }
+      }
+      coworkers.showAll();
+      */
+      /*헌데 이는 좋지 않은 방법이다. 함수 지정 시 선언문 내에 있는 coworkers가
+      다른 것에 사용될 시에, 오류를 불러올 수 있다.
+      */
+    </script>
+    <h2>다른 방법</h2>
+    <script>
+      coworkers.explain = function(){
+        for (var key in this){
+          document.write(key+" : "+this[key]+'<br>');
+        }
+      }
+      coworkers.explain();
+    </script>
+  </body>
+</html>
