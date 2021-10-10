@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            p.one{
+                margin:0px;
+                font-size: 20px;
+            }
+            p.none_text{
+                border:0px;
+                margin:0px;
+                padding:0px;
+            }
+        </style>
+        <title>복붙용입니다</title>
+    </head>
+    <body>
+        <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        var search = document.querySelector('body');
+        var transfer = document.querySelector('#night_day');
+        if (search.style.backgroundColor === 'black'){
+        transfer.value = 'day';
+        }
+        else{
+        transfer.value = 'night';
+        }
+        ">
+        <p class="none_text">
+            &nbsp;
+        </p>
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        var search = document.querySelector('body');
+        var transfer = document.querySelector('#night_day');
+        if (search.style.backgroundColor === 'black'){
+        transfer.value = 'day';
+        }
+        else{
+        transfer.value = 'night';
+        }
+        ">
+        <p class="none_text">
+            &nbsp;
+        </p>
+        <p class="one">
+            글씨 내용 테스트입니다.
+        </p>
+        <p class="none_text">
+            &nbsp;
+        </p>
+        <button onclick="printDate()">현재 날짜와 시간 표시하기!</button>
+        <p id="date"></p>
+        <script>
+            function printDate() {
+                document.getElementById("date").innerHTML = Date();
+            }
+        </script>
+        <p>
+            
+        </p>
+    </body>
+</html>
